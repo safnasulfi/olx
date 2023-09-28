@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title_block%}
+  <title>Vehicle details</title>
+{% endblock%}
+
+{% block body_block%}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="card" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                        {% if vehicle.Image%}
+                        <img src="{{vehicle.Image.url}}" alt="">
+                        
+                        
+                        {% endif%}
+
+                      <li class="list-group-item">{{vehicle.name}}</li>
+                      <li class="list-group-item">{{vehicle.model_name}}</li>
+                      <li class="list-group-item">{{vehicle.km_driven}}</li>
+                      <li class="list-group-item">{{vehicle.contact}}</li>
+
+                 
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
+    {% endblock%}

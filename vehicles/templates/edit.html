@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title_block%}
+  <title>Vehicle update</title>
+{% endblock%}
+
+{% block body_block%}
+    <form action="" method="post" enctype="multipart/form-data">
+        <div class="container">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <h2 class="text-center">UPDATE</h2>
+                
+                    {%csrf_token%}
+                    {{form.as_p}}
+                    <button type="submit" class="btn btn-outline-success form-control">Update</button>
+                </div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+    </form>
+    {% endblock%}
