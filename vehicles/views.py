@@ -89,7 +89,7 @@ class VehicleDeatileView(View):
     def get(self,request,*args,**kwargs):
         id=kwargs.get("pk")
         qs=VehicleModels.objects.get(id=id)
-        return render(request,"deatiles.html",{"vehicle":qs})
+        return render(request,"details.html",{"vehicle":qs})
     
 
 class VehicleDeleteView(View):

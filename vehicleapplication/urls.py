@@ -22,9 +22,9 @@ from vehicles.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("vehicle/add",VehicleCreateView.as_view(),name="vehicle-add"),
-    path("vehicle/list",VehicleListView.as_view(),name="vehicle-list"),
+    path("vehicle/all",VehicleListView.as_view(),name="vehicle-list"),
     path("vehicle/<int:pk>/change",VehicleUpdateView.as_view(),name="vehicle-update"),
-    path("vehicle/<int:pk>/deatile",VehicleDeatileView.as_view(),name="vehicle-detail"),
+    path("vehicle/<int:pk>",VehicleDeatileView.as_view(),name="vehicle-detail"),
     path("vehicle/<int:pk>/remove",VehicleDeleteView.as_view(),name="vehicle-delete"),
     path("registration",SignUpView.as_view(),name="register"),
     path('signin',SignInView.as_view(),name="signin"),
